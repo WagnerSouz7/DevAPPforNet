@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Atividade</title>
+</head>
+<body>
+    <div id="inicio">
+        <h1>Desenvolvimento de Aplicações para Internet</h1>
+        <p id="sub">Dev: Wagner Isaquiel Pedro de Souza </p>
+        <label for="nome" id="pnome">Digite seu nome:</label>
+        <input type="text" id="nome" placeholder="Seu nome aqui">
+        <button onclick="iniciarProva('inicio, quiz1')" style="display:block;" id="avancar">Iniciar</button>
+    </div>
+    
+    <div class="quiz" id="quiz1">
+        <h1>Questão 1º</h1>
+        <label>Qual das seguintes tags é usada para criar um link em HTML?</label>
+        <p>A) &lt;link&gt; </p>
+        <p>B) &lt;a&gt;</p>
+        <p>C) &lt;url&gt;</p>
+        <label>Insira aqui a resposta:</label>
+        <input type="text" id="input1">
+        <span id="resposta1"></span>
+        <div class="button-container">
+            <button onclick="Resposta1()">Responder</button>
+            <button onclick="avancar('quiz1', 'quiz2')" style="display:none;" id="avancar">Avançar</button>
+        </div>
+    </div>
+    
+    <div class="quiz" id="quiz2" style="display:none;">
+        <h1>Questão 2º</h1>
+        <label>Qual atributo é usado para especificar o endereço de destino de um link?</label>
+        <p>A) src</p>
+        <p>B) href</p>
+        <p>C) link</p>
+        <label>Insira aqui a resposta:</label>
+        <input type="text" id="input2">
+        <span id="resposta2"></span>
+        <div class="button-container">
+            <button onclick="Resposta2()">Responder</button>
+            <button onclick="avancar('quiz2', 'quiz3')" style="display:none;" id="avancar">Avançar</button> 
+        </div>
+    </div>
+
+    <div class="quiz" id="quiz3" style="display:none;">
+        <h1>Questão 3º</h1>
+        <label>Qual das seguintes tags é considerada uma tag sem fechamento?</label>
+        <p>A) &lt;div&gt;</p>
+        <p>B) &lt;p&gt;</p>
+        <p>C) &lt;br&gt;</p>
+        <label>Insira aqui a resposta:</label>
+        <input type="text" id="input3">
+        <span id="resposta3"></span>
+        <div class="button-container">
+            <button onclick="Resposta3()">Responder</button>
+            <button onclick="avancar('quiz3', 'quiz4')" style="display:none;" id="avancar">Avançar</button>
+        </div>
+    </div>
+    
+    <div class="quiz" id="quiz4" style="display:none;">
+        <h1>Questão 4º</h1>
+        <label>Qual propriedade CSS é usada para alterar a cor do texto?</label>
+        <p>A) color</p>
+        <p>B) text-color</p>
+        <p>C) font-color</p>
+        <label>Insira aqui a resposta:</label>
+        <input type="text" id="input4">
+        <span id="resposta4"></span>
+        <div class="button-container">
+            <button onclick="Resposta4()">Responder</button>
+            <button onclick="avancar('quiz4', 'quiz5')" style="display:none;" id="avancar">Avançar</button>
+        </div>
+    </div>
+
+    <div class="quiz" id="quiz5" style="display:none;">
+        <h1>Questão 5º</h1>
+        <label>Qual valor de display faz com que um elemento não seja exibido na página?</label>
+        <p>A) block</p>
+        <p>B) inline</p>
+        <p>C) none</p>
+        <label>Insira aqui a resposta:</label>
+        <input type="text" id="input5">
+        <span id="resposta5"></span>
+        <div class="button-container">
+            <button onclick="Resposta5()">Responder</button>
+            <button onclick="avancar('quiz5', 'quiz6')" style="display:none;" id="avancar">Avançar</button>
+        </div>
+    </div>
+
+    <div class="quiz" id="quiz6" style="display:none;">
+        <h1>Questão 6º</h1>
+        <label>Qual das opções a seguir é a forma correta de aplicar um estilo a todos os parágrafos em uma folha de estilo CSS?</label>
+        <p>A) p { style: { } }</p>
+        <p>B) all p { }</p>
+        <p>C) p { }</p>
+        <label>Insira aqui a resposta:</label>
+        <input type="text" id="input6">
+        <span id="resposta6"></span>
+        <div class="button-container">
+            <button onclick="Resposta6()">Responder</button>
+            <button onclick="avancar('quiz6', 'quiz7')" style="display:none;" id="avancar">Avançar</button>
+        </div>
+    </div>
+    
+    <div class="quiz" id="quiz7" style="display:none;">
+        <h1>Questão 7º</h1>
+        <label>Qual comando é usado para exibir uma mensagem em um alerta no navegador?</label>
+        <p>A) alert()</p>
+        <p>B) window()</p>
+        <p>C) console.log()</p>
+        <label>Insira aqui a resposta:</label>
+        <input type="text" id="input7">
+        <span id="resposta7"></span>
+        <div class="button-container">
+            <button onclick="Resposta7()">Responder</button>
+            <button onclick="avancar('quiz7', 'quiz8')" style="display:none;" id="avancar">Avançar</button>
+        </div>
+    </div>
+    
+    <div class="quiz" id="quiz8" style="display:none;">
+        <h1>Questão 8º</h1>
+        <label>Qual das opções a seguir é usada para declarar uma função em JavaScript?</label>
+        <p>A) function nomeFunção() {}</p>
+        <p>B) declare nomeFunção() {}</p>
+        <p>C) nomeFunção() { function }</p>
+        <label>Insira aqui a resposta:</label>
+        <input type="text" id="input8">
+        <span id="resposta8"></span>
+        <div class="button-container">
+            <button onclick="Resposta8()">Responder</button>
+            <button onclick="avancar('quiz8', 'quiz9')" style="display:none;" id="avancar">Avançar</button>
+        </div>
+    </div>
+
+    <div class="quiz" id="quiz9" style="display:none;">
+        <h1>Questão 9º</h1>
+        <label>O que é um objeto em JavaScript?</label>
+        <p>A) Uma variável simples</p>
+        <p>B) Uma estrutura que contém pares de chave-valor</p>
+        <p>C) Um comando de controle</p>
+        <label>Insira aqui a resposta:</label>
+        <input type="text" id="input9">
+        <span id="resposta9"></span>
+        <div class="button-container">
+            <button onclick="Resposta9()">Responder</button>
+            <button onclick="avancar('quiz9', 'quiz10')" style="display:none;" id="avancar">Avançar</button>
+        </div>
+    </div>
+    
+    <div class="quiz" id="quiz10" style="display:none;">
+        <h1>Questão 10º</h1>
+        <label>Como você pode adicionar um arquivo JavaScript a um documento HTML?</label>
+        <p>A) &lt;script&gt;src="file.js"&lt;/script&gt;</p>
+        <p>B) &lt;js src="file.js"&gt;</p>
+        <p>C) &lt;link src="file.js&gt; </p>
+        <label>Insira aqui a resposta:</label>
+        <input type="text" id="input10">
+        <span id="resposta10"></span>
+        <div class="button-container">
+            <button onclick="Resposta10()">Responder</button>
+            <button onclick="avancar('quiz10', 'final')" style="display:none;" id="avancar">Avançar</button>
+        </div>
+    </div>
+    
+    <div id="resultado" style="display:none;"> 
+        <h2>Prova Finalizada</h2>
+        <p id="pontuacao">Sua pontuação: 0/10</p>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
